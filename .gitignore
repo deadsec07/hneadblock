@@ -1,0 +1,14 @@
+# macOS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# common build stuff (in case you add tooling later)
+dist/
+build/
+node_modules/
+*.log
+
+# dotenv
+.env
+.env.*
