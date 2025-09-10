@@ -12,3 +12,12 @@ node_modules/
 # dotenv
 .env
 .env.*
+metadata/
+_metadata/
+*.crx
+*.pem
+*.zip
+.DS_Store
+node_modules/
+.idea/
+.vscode/

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hne Ad Tools</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hne Ad Tools
+        <small class="brandline">
+      by <a href="https://hnetechnologies.com"
+            target="_blank" rel="noopener noreferrer">hnetechnologies</a>
+        </small>
+      </h1>
+      <span id="ver"></span>
+    </header>
+
+    <section class="row">
+      <label class="switch">
+        <input type="checkbox" id="enabled">
+        <span class="slider"></span>
+      </label>
+      <span>Enabled</span>
+    </section>
+
+    <section>
+      <div class="modes">
+        <label><input type="radio" name="mode" value="stealth"> Stealth</label>
+        <label><input type="radio" name="mode" value="aggressive"> Aggressive</label>
+      </div>
+      <small id="rules-status"></small>
+    </section>
+
+    <section class="stats">
+      <div>Blocked ads: <strong id="count">0</strong></div>
+      <button id="reset">Reset counter</button>
+    </section>
+
+    <footer>
+      <small>Service worker sleeps when idle — that’s normal.</small>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

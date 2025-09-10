@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1, "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/ima3_stub.js" } },
+    "condition": {
+      "regexFilter": "^https?://imasdk\\.googleapis\\.com/(?:js/(?:sdkloader/)?ima3(?:\\.js)?|js/core/.*?\\.js)$",
+      "resourceTypes": ["script"],
+      "initiatorDomains": ["www.youtube.com","m.youtube.com","youtube.com"]
+    }
+  },
+  {
+    "id": 2, "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/ima3_stub.js" } },
+    "condition": {
+      "regexFilter": "^https?://www\\.gstatic\\.com/ima3/.*?\\.js$",
+      "resourceTypes": ["script"],
+      "initiatorDomains": ["www.youtube.com","m.youtube.com","youtube.com"]
+    }
+  },
+  {
+    "id": 3, "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/empty.xml" } },
+    "condition": {
+      "regexFilter": "^https?://(?:googleads|securepubads|pubads)\\.g\\.doubleclick\\.net/(?:pagead/ads|gampad/ads)\\b",
+      "resourceTypes": ["xmlhttprequest","sub_frame","other"],
+      "initiatorDomains": ["www.youtube.com","m.youtube.com","youtube.com"]
+    }
+  },
+  {
+    "id": 4, "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/empty.xml" } },
+    "condition": {
+      "regexFilter": "^https?://www\\.youtube\\.com/pagead/\\b",
+      "resourceTypes": ["xmlhttprequest","other"],
+      "initiatorDomains": ["www.youtube.com","m.youtube.com","youtube.com"]
+    }
+  },
+  {
+    "id": 5, "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/empty.xml" } },
+    "condition": {
+      "regexFilter": "^https?://(?:www|s)\\.youtube\\.com/api/ads/.*(?:vmap|ads)\\b",
+      "resourceTypes": ["xmlhttprequest","other"],
+      "initiatorDomains": ["www.youtube.com","m.youtube.com","youtube.com"]
+    }
+  },
+  {
+    "id": 6, "priority": 1,
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/empty.js" } },
+    "condition": {
+      "regexFilter": "^https?://pagead2\\.googlesyndication\\.com/",
+      "resourceTypes": ["script","xmlhttprequest","image","other"],
+      "initiatorDomains": ["www.youtube.com","m.youtube.com","youtube.com"]
+    }
+  }
+]

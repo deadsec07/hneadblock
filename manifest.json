@@ -1,36 +1,51 @@
 {
   "manifest_version": 3,
-  "name": "Edu Ad Tools (YouTube demo)",
-  "version": "0.2.0",
-  "description": "Educational example: network filtering + YouTube auto-skipper.",
+  "name": "Hne Ad Tools (Stealth/Aggressive)",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Hne Ad Tools",
+    "default_popup": "popup.html"
+  },
+  "background": { "service_worker": "background.js" },
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestWithHostAccess",
     "storage",
-    "scripting"
+    "tabs"
   ],
   "host_permissions": [
-    "*://*.youtube.com/*",
-    "*://*.google.com/*",
+    "*://*.youtube.com/*", "*://youtube.com/*", "*://m.youtube.com/*",
     "*://*.doubleclick.net/*",
-    "*://*.googlesyndication.com/*"
+    "*://*.googlesyndication.com/*", "*://pagead2.googlesyndication.com/*",
+    "*://*.googleapis.com/*", "*://*.gstatic.com/*"
   ],
-  "action": { "default_title": "Edu Ad Tools" },
-  "declarative_net_request": {
-    "rule_resources": [
-      { "id": "ruleset_1", "enabled": true, "path": "rules.json" }
-    ]
-  },
   "content_scripts": [
     {
-      "matches": [
-        "*://*.youtube.com/*",
-        "*://youtube.com/*",
-        "*://m.youtube.com/*"
-      ],
+      "matches": ["*://*.youtube.com/*", "*://youtube.com/*", "*://m.youtube.com/*"],
+      "js": ["content.js"],
       "all_frames": true,
-      "run_at": "document_idle",
-      "js": ["content.js"]
+      "run_at": "document_idle"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "ruleset_1", "enabled": false, "path": "rules/ruleset_1.json" }
+    ]
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["stubs/ima3_stub.js", "stubs/empty.xml", "stubs/empty.js"],
+      "matches": [
+        "*://*.youtube.com/*", "*://youtube.com/*", "*://m.youtube.com/*",
+        "*://*.doubleclick.net/*", "*://*.googlesyndication.com/*",
+        "*://*.googleapis.com/*", "*://*.gstatic.com/*"
+      ]
     }
   ]
 }
