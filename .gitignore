@@ -21,3 +21,6 @@ _metadata/
 node_modules/
 .idea/
 .vscode/
+
+#chrom store related marketing stuff
+chrome_store
