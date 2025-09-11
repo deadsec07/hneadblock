@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Hne Ad Tools (Stealth/Aggressive)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "action": {
     "default_title": "Hne Ad Tools",
     "default_popup": "popup.html"
@@ -10,8 +10,7 @@
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestWithHostAccess",
-    "storage",
-    "tabs"
+    "storage"
   ],
   "host_permissions": [
     "*://*.youtube.com/*", "*://youtube.com/*", "*://m.youtube.com/*",
