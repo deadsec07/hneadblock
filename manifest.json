@@ -1,9 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Hne Ad Tools (Stealth/Aggressive)",
-  "version": "1.0.1",
+  "name": "YouTube™ Ad Blocker (Stealth & Aggressive) - HNE",
+  "description": "Block YouTube™ prerolls with Stealth (mute+skip) or Aggressive (network rules). Lightweight and privacy-friendly.",
+  "short_name": "Youtube Ad Blocker",
+  "version": "1.0.2",
   "action": {
-    "default_title": "Hne Ad Tools",
+    "default_title": "Youtube Ad Blocker",
     "default_popup": "popup.html"
   },
   "background": { "service_worker": "background.js" },
