@@ -3,6 +3,7 @@
 HNE Ad Tools is a YouTube-focused ad blocking extension by A A Hasnat and HNE Technologies. It provides lightweight preroll suppression with both stealth and aggressive modes while keeping the extension small and privacy-friendly.
 
 Links:
+- Chrome Web Store: https://chromewebstore.google.com/detail/youtube-ad-blocker-stealt/mobhlgbkomfcbhkmnikoaocelnickbph?authuser=0&hl=en
 - GitHub: https://github.com/deadsec07/hneadblock
 - Main site: https://hnetechnologies.com/
 - Creator profile: https://deadsec07.github.io/
