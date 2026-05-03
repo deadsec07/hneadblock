@@ -1,39 +1,19 @@
-# Hne Ad Tools — YouTube™ Ad Blocker
+# HNE Ad Tools — YouTube Ad Blocker
 
-Two simple modes to tame YouTube preroll ads:
+HNE Ad Tools is a YouTube-focused ad blocking extension by A A Hasnat and HNE Technologies. It provides lightweight preroll suppression with both stealth and aggressive modes while keeping the extension small and privacy-friendly.
 
-- **Stealth** — mutes the player and auto-clicks “Skip Ad” when available (minimal footprint).
-- **Aggressive** — blocks known ad endpoints (IMA/VMAP) and fast-forwards any ad that leaks.
-
-Lightweight popup, tiny “Skipping ads…” toast (so users know it’s working), and a blocked-ads counter.  
-**No data collection. Runs only on YouTube domains.**
-
----
+Links:
+- GitHub: https://github.com/deadsec07/hneadblock
+- Main site: https://hnetechnologies.com/
+- Creator profile: https://deadsec07.github.io/
 
 ## Features
+- Stealth mode: mute and auto-skip behavior
+- Aggressive mode: network-rule blocking for known ad flows
+- Toolbar counter and popup status
+- No telemetry and no remote code
 
-- 🔇 **Stealth mode**: mute + auto-skip; keeps behavior human-like.
-- 🚫 **Aggressive mode**: DNR rules stub IMA and return empty VMAP; blitz any stray ads.
-- ✅ **Blocked counter** on the toolbar badge and in the popup.
-- 📝 **Tiny corner toast** (“Skipping ads…”) during short black-screen waits.
-- 🔒 **Privacy-friendly**: no telemetry, no remote code, no personal data.
-
----
-
-## Install (Load Unpacked)
-
+## Install
 1. Open `chrome://extensions`
-2. Enable **Developer mode** (top right)
-3. Click **Load unpacked**
-4. Select this folder (the one containing `manifest.json`)
-
----
-
-## Pack ZIP (for store upload)
-
-**macOS/Linux**
-```bash
-zip -r dist/hne-1.0.0.zip . \
-  -x "*/.git/*" "*/node_modules/*" "*.DS_Store" "dist/*" \
-  "metadata/*" "_metadata/*"
-
+2. Enable Developer mode
+3. Load unpacked and select this folder
